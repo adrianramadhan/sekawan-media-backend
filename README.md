@@ -16,7 +16,9 @@ Aplikasi web untuk memonitoring dan mengelola pemesanan kendaraan di perusahaan 
 ## Teknologi yang Digunakan
 
 - PHP 8.1
-- Laravel 10.x
+- Tailwind CSS
+- Flowbite
+- Laravel 11
 - MySQL 8.0
 - Breeze (Autentikasi)
 - Spatie Packages (Otorisasi)
