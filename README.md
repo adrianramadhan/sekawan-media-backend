@@ -19,7 +19,7 @@ Aplikasi web untuk memonitoring dan mengelola pemesanan kendaraan di perusahaan 
 - Laravel 10.x
 - MySQL 8.0
 - Breeze (Autentikasi)
-- Spatie Packages (Permission, ActivityLog)
+- Spatie Packages (Otorisasi)
 
 ## Persyaratan Sistem
 
