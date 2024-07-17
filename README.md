@@ -18,7 +18,7 @@ Aplikasi web untuk memonitoring dan mengelola pemesanan kendaraan di perusahaan 
 - PHP 8.1
 - Tailwind CSS
 - Flowbite
-- Laravel 10.x
+- Laravel 11
 - MySQL 8.0
 - Breeze (Autentikasi)
 - Spatie Packages (Otorisasi)
