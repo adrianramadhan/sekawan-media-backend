@@ -28,6 +28,11 @@ Route::middleware('auth')->group(function () {
         Route::delete('/kendaraan/{kendaraan}', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
 
         Route::get('/driver', [DriverController::class, 'index'])->name('driver.index');
+        Route::get('/driver/create', [DriverController::class, 'create'])->name('driver.create');
+        Route::post('/driver/store', [DriverController::class, 'store'])->name('driver.store');
+        Route::get('/driver/{driver}/edit', [DriverController::class, 'edit'])->name('driver.edit');
+        Route::put('/driver/{driver}', [DriverController::class, 'update'])->name('driver.update');
+        Route::delete('/driver/{driver}', [DriverController::class, 'destroy'])->name('driver.destroy');
     });
 });
 require __DIR__.'/auth.php';
