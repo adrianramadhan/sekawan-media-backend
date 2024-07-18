@@ -30,12 +30,34 @@
                             <h3 class="text-indigo-950 text-xl font-bold">{{$kendaraan->merk}}</h3>
                         </div>
                     </div>
-                    <div  class="hidden md:flex flex-col">
+                    <div class="hidden md:flex flex-col">
                         <p class="text-slate-500 text-sm">Tahun Kendaraan</p>
                         <h3 class="text-indigo-950 text-xl font-bold">{{$kendaraan->tahun}}</h3>
                         <p class="text-slate-500 text-sm">Status</p>
-                        <h3 class="text-indigo-950 text-xl font-bold">{{$kendaraan->status}}</h3>
+                        @switch($kendaraan->status)
+                            @case('tersedia')
+                                <div class="bg-green-200 rounded-md px-2 py-1">
+                                    <h3 class="text-green-600 text-xl font-bold">{{$kendaraan->status}}</h3>
+                                </div>
+                                @break
+                            @case('perbaikan')
+                                <div class="bg-yellow-200 rounded-md px-2 py-1">
+                                    <h3 class="text-yellow-600 text-xl font-bold">{{$kendaraan->status}}</h3>
+                                </div>
+                                @break
+                            @case('digunakan')
+                                <div class="bg-red-200 rounded-md px-2 py-1">
+                                    <h3 class="text-red-600 text-xl font-bold">{{$kendaraan->status}}</h3>
+                                </div>
+                                @break
+                            @default
+                                <div class="bg-gray-200 rounded-md px-2 py-1">
+                                    <h3 class="text-gray-600 text-xl font-bold">{{$kendaraan->status}}</h3>
+                                </div>
+                        @endswitch
                     </div>
+
+
                     <div class="hidden md:flex flex-row items-center gap-x-3">
                         <a href="{{route('admin.kendaraan.edit', $kendaraan)}}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Edit
