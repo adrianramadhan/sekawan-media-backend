@@ -26,9 +26,22 @@
                     <div class="flex flex-row items-center gap-x-3">
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Status</p>
-                            <h3 class="text-indigo-950 text-xl font-bold">{{$driver->status}}</h3>
+                            @if($driver->status == 'aktif')
+                                <div class="bg-green-200 rounded-md px-2 py-1">
+                                    <h3 class="text-green-600 text-xl font-bold">{{$driver->status}}</h3>
+                                </div>
+                            @elseif($driver->status == 'tidak aktif')
+                                <div class="bg-red-200 rounded-md px-2 py-1">
+                                    <h3 class="text-red-600 text-xl font-bold">{{$driver->status}}</h3>
+                                </div>
+                            @else
+                                <div class="bg-gray-200 rounded-md px-2 py-1">
+                                    <h3 class="text-gray-600 text-xl font-bold">{{$driver->status}}</h3>
+                                </div>
+                            @endif
                         </div>
                     </div>
+
                     <div class="hidden md:flex flex-row items-center gap-x-3">
                         <a href="{{route('admin.driver.edit', $driver)}}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Edit

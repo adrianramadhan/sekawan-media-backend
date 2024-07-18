@@ -17,8 +17,22 @@
                         </div>
                         <div class="flex flex-col">
                             <p class="text-slate-500 text-sm">Status</p>
-                            <h3 class="text-indigo-950 text-xl font-bold">{{ $persetujuan->status }}</h3>
+                            <h3 class="text-xl font-bold py-1 px-3 rounded-full
+                                @if ($persetujuan->status == 'menunggu')
+                                    bg-gray-200 text-gray-600
+                                @elseif ($persetujuan->status == 'disetujui')
+                                    bg-green-200 text-green-800
+                                @elseif ($persetujuan->status == 'ditolak')
+                                    bg-red-200 text-red-800
+                                @else
+                                    bg-gray-200 text-gray-600
+                                @endif
+                                ">
+                                {{ $persetujuan->status }}
+                            </h3>
                         </div>
+
+
                         <div class="hidden md:flex flex-row items-center gap-x-3">
                             <form action="{{ route('approver.persetujuan.approve', $persetujuan->id) }}" method="POST">
                                 @csrf
