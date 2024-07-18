@@ -102,29 +102,37 @@ graph TD
    ```
     composer install
    ```
-4. Salin file .env.example menjadi .env dan sesuaikan pengaturan database dan konfigurasi lainnya:
+4. Install semua dependensi javascript menggunakan NPM:
+   ```
+    npm install
+   ```
+5. Salin file .env.example menjadi .env dan sesuaikan pengaturan database dan konfigurasi lainnya:
    ```
     cp .env.example .env
    ```
-5. Generate key aplikasi Laravel:
+6. Generate key aplikasi Laravel:
    ```
     php artisan key:generate
    ```
-6. Lakukan migrasi database dan lakukan seeding:
+7. Lakukan migrasi database dan lakukan seeding:
     ```
     php artisan migrate --seed
     ```
-7. Jalankan server development:
+8. Compile asset
+    ```
+    npm install
+    ```
+9. Jalankan server development:
     ```
     php artisan serve
     ```
-8. Role Admin
+10. Role Admin
     - Email : adrian@admin.com
     - pass  : password
-9. Role Approver
+11. Role Approver
     - Email : adrian@approver.com
     - pass  : password
-9. Role Approver
+12. Role Approver
     - Email : adisa@approver.com
     - pass  : password
 
