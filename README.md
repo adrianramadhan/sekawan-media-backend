@@ -120,7 +120,7 @@ graph TD
     ```
 8. Compile asset
     ```
-    npm install
+    npm run dev
     ```
 9. Jalankan server development:
     ```
