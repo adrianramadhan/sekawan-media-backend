@@ -4,21 +4,21 @@ Aplikasi ini adalah sistem manajemen pemesanan kendaraan yang memungkinkan admin
 
 ## Fitur Utama
 
-### 1. Dashboard
+1. Dashboard
 - Grafik pemakaian kendaraan berdasarkan jumlah pemesanan.
 - Tombol untuk mengunduh laporan periodik pemesanan kendaraan dalam format Excel.
-### 2. Manajemen Kendaraan
+2. Manajemen Kendaraan
 - Menambah, mengedit, dan menghapus informasi kendaraan.
 - Dilengkapi dengan validasi data dan manajemen gambar kendaraan.
-### 3. Manajemen Driver
+3. Manajemen Driver
 - CRUD (Create, Read, Update, Delete) driver dengan informasi detail.
-### 4. Manajemen Pemesanan
+4. Manajemen Pemesanan
 - Admin dapat membuat dan mengelola pemesanan kendaraan.
 - Approver dapat melihat dan menyetujui pemesanan yang diajukan.
-### 5. Persetujuan Pemesanan
+5. Persetujuan Pemesanan
 - Persetujuan pemesanan oleh approver dengan dua tingkat: level 1 dan level 2.
 - Status pemesanan diperbarui secara otomatis setelah disetujui oleh approver.
-### 6. Ekspor Laporan
+6. Ekspor Laporan
 - Laporan periodik pemesanan kendaraan dapat diekspor ke dalam format Excel.
 
 ## Teknologi yang Digunakan
