@@ -9,7 +9,6 @@ Aplikasi ini adalah sistem manajemen pemesanan kendaraan yang memungkinkan admin
 - Tombol untuk mengunduh laporan periodik pemesanan kendaraan dalam format Excel.
 2. Manajemen Kendaraan
 - Menambah, mengedit, dan menghapus informasi kendaraan.
-- Dilengkapi dengan validasi data dan manajemen gambar kendaraan.
 3. Manajemen Driver
 - CRUD (Create, Read, Update, Delete) driver dengan informasi detail.
 4. Manajemen Pemesanan
