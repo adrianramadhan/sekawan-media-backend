@@ -7,6 +7,10 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+                        <a href="{{ route('export.pemesanan') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            Export Data Pemesanan
+                        </a>
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-10">
                 <canvas id="pemakaianKendaraanChart"></canvas>
             </div>
