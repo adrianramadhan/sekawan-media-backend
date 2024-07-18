@@ -33,6 +33,8 @@
                     <div  class="hidden md:flex flex-col">
                         <p class="text-slate-500 text-sm">Tahun Kendaraan</p>
                         <h3 class="text-indigo-950 text-xl font-bold">{{$kendaraan->tahun}}</h3>
+                        <p class="text-slate-500 text-sm">Status</p>
+                        <h3 class="text-indigo-950 text-xl font-bold">{{$kendaraan->status}}</h3>
                     </div>
                     <div class="hidden md:flex flex-row items-center gap-x-3">
                         <a href="{{route('admin.kendaraan.edit', $kendaraan)}}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\KendaraanController;
+use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +34,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/driver/{driver}/edit', [DriverController::class, 'edit'])->name('driver.edit');
         Route::put('/driver/{driver}', [DriverController::class, 'update'])->name('driver.update');
         Route::delete('/driver/{driver}', [DriverController::class, 'destroy'])->name('driver.destroy');
+
+        Route::get('/pemesanan', [PemesananController::class, 'index'])->name('pemesanan.index');
+        Route::get('/pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
+        Route::post('/pemesanan/store', [PemesananController::class, 'store'])->name('pemesanan.store');
+        Route::get('/pemesanan/{pemesanan}/edit', [PemesananController::class, 'edit'])->name('pemesanan.edit');
+        Route::put('/pemesanan/{pemesanan}', [PemesananController::class, 'update'])->name('pemesanan.update');
+        Route::delete('/pemesanan/{pemesanan}', [PemesananController::class, 'destroy'])->name('pemesanan.destroy');
     });
 });
 require __DIR__.'/auth.php';
