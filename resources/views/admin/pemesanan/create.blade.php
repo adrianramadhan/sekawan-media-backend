@@ -23,24 +23,6 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="approver1_id" class="block mb-2 text-sm font-medium text-gray-900">Approver 1</label>
-                        <select id="approver1_id" name="approver1_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
-                            @foreach($approvers as $approver)
-                                <option value="{{ $approver->id }}">{{ $approver->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="approver2_id" class="block mb-2 text-sm font-medium text-gray-900">Approver 2</label>
-                        <select id="approver2_id" name="approver2_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
-                            @foreach($approvers as $approver)
-                                <option value="{{ $approver->id }}">{{ $approver->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <div class="mb-4">
                         <label for="kendaraan_id" class="block mb-2 text-sm font-medium text-gray-900">Kendaraan</label>
                         <select id="kendaraan_id" name="kendaraan_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                             @foreach($kendaraan as $vehicle)
@@ -85,9 +67,28 @@
                     </div>
 
                     <div class="mb-4">
+                        <label for="approver1_id" class="block mb-2 text-sm font-medium text-gray-900">Approver 1</label>
+                        <select id="approver1_id" name="approver1_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                            @foreach($approvers as $approver)
+                                <option value="{{ $approver->id }}">{{ $approver->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="approver2_id" class="block mb-2 text-sm font-medium text-gray-900">Approver 2</label>
+                        <select id="approver2_id" name="approver2_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                            @foreach($approvers as $approver)
+                                <option value="{{ $approver->id }}">{{ $approver->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
                         <button type="submit" class="py-4 px-6 bg-indigo-700 text-white rounded-full">Tambah</button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
