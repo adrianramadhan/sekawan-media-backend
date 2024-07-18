@@ -19,7 +19,7 @@ return new class extends Migration
             $table->dateTime('waktu_mulai');
             $table->dateTime('waktu_selesai');
             $table->text('tujuan');
-            $table->enum('status', ['menunggu', 'disetujui_level1', 'disetujui_level2', 'ditolak', 'selesai']);
+            $table->enum('status', ['menunggu', 'disetujui_level1', 'disetujui_level2', 'ditolak', 'disetujui']);
             $table->timestamps();
         });
     }

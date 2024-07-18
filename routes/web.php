@@ -3,6 +3,7 @@
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\KendaraanController;
 use App\Http\Controllers\PemesananController;
+use App\Http\Controllers\PersetujuanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-    Route::prefix('admin')->name('admin.')->group(function() {
+    Route::prefix('admin')->middleware('role:admin')->name('admin.')->group(function() {
         Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan.index');
         Route::get('/kendaraan/create', [KendaraanController::class, 'create'])->name('kendaraan.create');
         Route::post('/kendaraan/store', [KendaraanController::class, 'store'])->name('kendaraan.store');
@@ -41,6 +42,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/pemesanan/{pemesanan}/edit', [PemesananController::class, 'edit'])->name('pemesanan.edit');
         Route::put('/pemesanan/{pemesanan}', [PemesananController::class, 'update'])->name('pemesanan.update');
         Route::delete('/pemesanan/{pemesanan}', [PemesananController::class, 'destroy'])->name('pemesanan.destroy');
+    });
+
+    Route::prefix('approver')->middleware('role:Approver')->name('approver.')->group(function() {
+        Route::get('/persetujuan', [PersetujuanController::class, 'index'])->name('persetujuan.index');
+        Route::post('/persetujuan/{id}/approve', [PersetujuanController::class, 'approve'])->name('persetujuan.approve');
+        Route::post('/persetujuan/{id}/reject', [PersetujuanController::class, 'reject'])->name('persetujuan.reject');
     });
 });
 require __DIR__.'/auth.php';

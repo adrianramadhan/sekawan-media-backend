@@ -23,7 +23,13 @@
                     </div>
                     <div class="flex flex-col">
                         <p class="text-slate-500 text-sm">Status</p>
-                        <h3 class="text-indigo-950 text-xl font-bold">{{$pemesanan->status}}</h3>
+                        <h3 class="text-indigo-950 text-xl font-bold">
+                            @if ($pemesanan->persetujuan->isEmpty())
+                                Menunggu Persetujuan
+                            @else
+                                {{$pemesanan->status}}
+                            @endif
+                        </h3>
                     </div>
                     <div class="hidden md:flex flex-row items-center gap-x-3">
                         <a href="{{route('admin.pemesanan.edit', $pemesanan)}}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">

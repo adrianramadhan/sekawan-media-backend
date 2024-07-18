@@ -26,7 +26,9 @@
                         <label for="kendaraan_id" class="block mb-2 text-sm font-medium text-gray-900">Kendaraan</label>
                         <select id="kendaraan_id" name="kendaraan_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                             @foreach($kendaraan as $vehicle)
+                            @if ($vehicle->status == "tersedia" )
                                 <option value="{{ $vehicle->id }}">{{ $vehicle->nomor_plat }}</option>
+                            @endif
                             @endforeach
                         </select>
                     </div>
@@ -35,7 +37,9 @@
                         <label for="driver_id" class="block mb-2 text-sm font-medium text-gray-900">Driver</label>
                         <select id="driver_id" name="driver_id" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                             @foreach($drivers as $driver)
+                            @if ($driver->status == "aktif" )
                                 <option value="{{ $driver->id }}">{{ $driver->nama }}</option>
+                            @endif
                             @endforeach
                         </select>
                     </div>

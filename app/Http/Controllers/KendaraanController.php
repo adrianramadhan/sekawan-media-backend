@@ -47,7 +47,7 @@ class KendaraanController extends Controller
     {
         DB::transaction(function () use ($request, $kendaraan) {
             $validated = $request->validate([
-                'nomor_plat' => 'required|unique:kendaraan,nomor_plat,' ,
+                'nomor_plat' => 'required' ,
                 'jenis' => 'required',
                 'merk' => 'required',
                 'model' => 'required',

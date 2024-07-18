@@ -17,23 +17,32 @@
                     </x-nav-link>
                 </div>
 
+                @role('admin')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('admin.kendaraan.index')" :active="request()->routeIs('kendaraan')">
+                    <x-nav-link :href="route('admin.kendaraan.index')" :active="request()->routeIs('admin.kendaraan.*')">
                         {{ __('Kendaraan') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('admin.driver.index')" :active="request()->routeIs('kendaraan')">
+                    <x-nav-link :href="route('admin.driver.index')" :active="request()->routeIs('admin.driver.*')">
                         {{ __('Driver') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('admin.pemesanan.index')" :active="request()->routeIs('pemesanan')">
+                    <x-nav-link :href="route('admin.pemesanan.index')" :active="request()->routeIs('admin.pemesanan.*')">
                         {{ __('Pemesanan') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('Approver')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('approver.persetujuan.index')" :active="request()->routeIs('approver.persetujuan.*')">
+                        {{ __('Persetujuan') }}
+                    </x-nav-link>
+                @endrole
             </div>
 
             <!-- Settings Dropdown -->
